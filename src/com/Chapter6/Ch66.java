@@ -10,9 +10,18 @@ public class Ch66 {
         if (m == n) {
             return n;
         } else {
-            int recurse = prod(m, n - 1);
-            int result = n * recurse;
-            return result;
+            return (n * (prod(m, n - 1)));
         }
     }
 }
+
+/*Stack diagram
+ ___________________________________________________________________
+|main|
+|prod|m = 1|n = 3| recurse = 1, 3|result =
+|prod|m = 1|n = 2| recurse = 1, 2|result =
+|prod|m = 1|n = 1| recurse = 1, 1|result =
+ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅ ̅
+ Prod checks if the first integer equals the second. If not, it performs
+ a recursive reduction until the results match.
+ */
