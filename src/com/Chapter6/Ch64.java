@@ -15,6 +15,8 @@ public class Ch64 {
         double b = Math.sin(Math.PI / 4);
         double c = (Math.cos(Math.PI / 4) / 2);
         multadd(a, b, c);
-        System.out.println("The result is " + multadd(a, b, c));
+        System.out.println("The first result is " + multadd(a, b, c));
+
+        System.out.println("The second result is " + multadd(a, b, c));
     }
 }
