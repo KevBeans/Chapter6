@@ -6,7 +6,7 @@ public class Ch64 {
 
         return (a * b + c);
     }
-//FIX THIS FIX THIS FIX THIS FIX THIS FIX THIS
+
     public static double expSum(double x) {
 
         double a = 1.0;
