@@ -4,16 +4,21 @@ public class Ch69 {
 
     public static double power(double x, int n) {
 
-        if Math.pow(x, n) == x * Math.pow(x, n-1) {
-            return Math.pow(x, n);
+        if (n == 0) {
+            return 1;
+        } else {
+            if (n > 0) {
+                return x * power(x, n - 1);
+            } else {
+                return (1.0 / power(x, Math.abs(n)));
+            }
         }
     }
 
     public static void main(String[] args) {
 
-        double x = 4.0;
-        int n = 2;
-
-        power(x, n);
+        System.out.println("The result is " + power(2, 4));
+        System.out.println("The result is " + power(4, 0));
+        System.out.println("The result is " + power(2, -2));
     }
 }
